@@ -308,17 +308,20 @@ def show_fcfs(ax: Axes, mode: FCFs) -> None:
     fcfs = mode.fcfs
     xs = range(len(fcfs))
     label = (
-        fr"$\nu _{{{mode.mulliken_id}}}$"
-        fr"(${mode.irrep.letter}_{{{mode.irrep.subscript}}}$)"
+        fr"$\nu _{{{mode.mulliken_id}}}"
+        r"=" 
+        fr"{mode.nu_cm:.0f}$"
+        r"cm$^{-1}$" 
         r", $\Delta Q=" 
         fr"{mode.dQ:.4f}$"
     )
+        # fr"(${mode.irrep.letter}_{{{mode.irrep.subscript}}}$)"
     ax.semilogy(xs, fcfs, label=label)
 
 
 def main():
     ratio=16/9
-    width=4
+    width=5.25
     fig = plt.figure(
         layout='constrained',
         figsize=(ratio*width,width),
