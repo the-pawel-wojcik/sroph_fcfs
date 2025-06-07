@@ -345,7 +345,7 @@ def main():
     ax.set_ylim(top=1, bottom=1e-100)
     ax.legend()
     ax.grid()
-    fig.savefig(fname='fcfs_xc.svg')
+    fig.savefig(fname='fcfs_all_xc.svg')
 
 if __name__ == "__main__":
     main()
