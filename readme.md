@@ -22,3 +22,5 @@ while the `do_not_excite_subspace` parameter is set to comprise all but one
 mode.
 
 ## Results
+The ezFCF simulations are collected uder the `simulations` directory. The 1D
+FCFs along selected modes are plotted in the `scripts` directory.
