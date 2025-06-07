@@ -30,7 +30,7 @@ def save_batch(batch: int):
     ax = fig.subplots()
     ax.set_ylabel(r'$|\langle 0_{C}| n_{X} \rangle |$')
     ax.set_xlabel(r'$n_X$')
-    for mode in all_modes_fcfs[10*batch:10*(batch+1)]:
+    for mode in all_modes_fcfs[10*batch:min(10*(batch+1), len(all_modes_fcfs))]:
         show_fcfs(ax, mode)
     ax.set_yscale('log')
     ax.set_title("SrOPh X-C")
@@ -50,7 +50,7 @@ def save_batch(batch: int):
 
 
 def main():
-    for batch in range(3):
+    for batch in range(4):
         save_batch(batch)
 
 
