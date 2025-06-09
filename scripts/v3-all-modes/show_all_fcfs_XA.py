@@ -6,7 +6,7 @@ from database_XA import all_modes_fcfs, FCFs
 
 def show_fcfs(ax: Axes, mode: FCFs) -> None:
     fcfs = mode.fcfs
-    fcfs = [fcf if fcf > 1e-75 else np.nan for fcf in fcfs]
+    fcfs = [abs(fcf) if abs(fcf) > 1e-75 else np.nan for fcf in fcfs]
     xs = range(len(fcfs))
     label = (
         r"$\tilde{\nu}"
